@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Management System</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: #333;
+        }
+        header{
+            background: linear-gradient(to right, #4e73df, #224abe);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .container{
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        select{
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: #f8f9fa;
+        }
+        select:hover{
+            border-color: #224abe;
+        }
+        footer{
+            text-align: center;
+            background: #224abe;
+            color: white;
+            padding: 10px;
+            margin-top: 35%;
+            font-size: 20px;
+        }
+        footer a{
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        footer a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Explore World - Your Travel Companion
+    </header>
+    <div class="container">
+        <script>
+               var country = prompt("Enter your country:").toLowerCase();
+            if (country === "india") {
+                var state = prompt("Enter your state:").toLowerCase();
+                if (state === "rajasthan") {
+                    var district = prompt("Enter your district:").toLowerCase();
+                    if(district === "ajmer"){
+                    document.write(`<select>
+                                      <option>Ajmer Sharif Dargah</option>
+                                      <option>Adhai Din Ka Jhopra</option>
+                                      <option>Taragarh Fort</option>
+                                      <option>Anna Sagar Lake</option>
+                                      <option>Nasiyan Jain Temple (Red Temple)</option>
+                                      <option>Clock Tower</option>
+                                      <option>Prithviraj Smarak</option>
+                                      <option>Mayo College</option>
+                                      <option>Foy Sagar Lake</option>
+                                      <option>Akbari Fort & Museum</option>
+                                      <option>Durga Bagh Gardens</option>
+                                      <option>Soni Ji Ki Nasiyan</option>
+                                      <option>Nareli Jain Temple</option>
+                                      <option>Pushkar Lake</option>
+                                      <option>Brahma Temple (Pushkar)</option>
+                                    </select>
+                        `)
+                }else if(district ==="alwar"){
+                    document.write(`<select>
+                                        <option>Bala Quila (Alwar Fort)</option>
+                                        <option>Sariska Tiger Reserve</option>
+                                        <option>Siliserh Lake</option>
+                                        <option>Moosi Maharani Ki Chhatri</option>
+                                        <option>City Palace (Vinay Vilas Mahal)</option>
+                                        <option>Fateh Jung Gumbad</option>
+                                        <option>Garbhaji Falls</option>
+                                        <option>Purjan Vihar (Company Garden)</option>
+                                        <option>Jaisamand Lake</option>
+                                        <option>Bhangarh Fort</option>
+                                        <option>Neemrana Fort Palace</option>
+                                        <option>Bharthari Temple</option>
+                                        <option>Pandupole Hanuman Temple</option>
+                                        <option>Karni Mata Temple</option>
+                                        <option>Naldeshwar Shrine</option>
+                                    </select>
+                    `);
+                }else if(district ==="banswara"){
+                    document.write(`<select>
+                                      <option>Anand Sagar Lake</option>
+                                      <option>Mahi Dam</option>
+                                      <option>Kagdi Pick Up Weir</option>
+                                      <option>Cheench Brahma Temple</option>
+                                      <option>Tripura Sundari Temple</option>
+                                      <option>Andeshwar Jain Temple</option>
+                                      <option>Paraheda Temple</option>
+                                      <option>Arthuna Temples</option>
+                                      <option>Diablab Lake</option>
+                                      <option>Abdulla Pir Dargah</option>
+                                      <option>Raj Mandir</option>
+                                      <option>Kalpa Vriksha</option>
+                                      <option>Bhim Kund</option>
+                                      <option>Madreshwar Temple</option>
+                                      <option>Pandava Caves</option>
+                                    </select>
+                    `);
+                }else if(district ==="baran"){
+                    document.write(`<select>
+                                      <option>Shahabad Fort</option>
+                                      <option>Sitabari</option>
+                                      <option>Bilasgarh</option>
+                                      <option>Shergarh Fort</option>
+                                      <option>Ramgarh Bhand Devra Temple</option>
+                                      <option>Brahmani Mata Temple</option>
+                                      <option>Kapildhara Waterfall</option>
+                                      <option>Tapasviyo Ki Bagechi</option>
+                                      <option>Sorsan Wildlife Sanctuary</option>
+                                      <option>Manihara Mahadev Temple</option>
+                                      <option>Kakoni Temple Complex</option>
+                                      <option>Shivaji Sagar Lake</option>
+                                      <option>Chuli Gorge</option>
+                                    </select>
+                    `);
+                }else if (city === "barmer") {
+                    document.write(`<select>
+                                        <option>Barmer Fort</option>
+                                        <option>Kiradu Temples</option>
+                                        <option>Rani Bhatiyani Temple</option>
+                                        <option>Juna Fort</option>
+                                        <option>Mahabar Sand Dunes</option>
+                                        <option>Shiv Temple</option>
+                                        <option>Samdari</option>
+                                        <option>Chinta Ji Temple</option>
+                                        <option>Sindhari</option>
+                                        <option>Panchpadra Salt Lake</option>
+                                        <option>Chhatradi</option>
+                                        <option>Devka Waterfall</option>
+                                    </select>`);
+                }else if (city === "bharatpur") {
+                    document.write(`<select>
+                                        <option>Keoladeo National Park</option>
+                                        <option>Bharatpur Palace</option>
+                                        <option>Lohagarh Fort</option>
+                                        <option>Ganga Mandir</option>
+                                        <option>Deeg Palace</option>
+                                        <option>Gopal Bhawan</option>
+                                        <option>Virasat Museum</option>
+                                        <option>Jawahar Burj</option>
+                                        <option>Shish Mahal</option>
+                                        <option>Banke Bihari Temple</option>
+                                        <option>Kamruddin Shah's Tomb</option>
+                                    </select>`);
+                }else if (city === "bhilwara") {
+                    document.write(`<select>
+                                        <option>Bhilwara Fort</option>
+                                        <option>Rani Mahal</option>
+                                        <option>Shree Bheru Ji Temple</option>
+                                        <option>Meghraj Ji Temple</option>
+                                        <option>Mandalgarh Fort</option>
+                                        <option>Vijay Sagar Lake</option>
+                                        <option>Harni Mahadev Temple</option>
+                                        <option>Gagron Fort</option>
+                                        <option>Chandrawati Temple</option>
+                                        <option>Jataun Ki Bawri</option>
+                                    </select>`);
+                }else if (city === "bikaner") {
+                    document.write(`<select>
+                                        <option>Junagarh Fort</option>
+                                        <option>Lalgarh Palace</option>
+                                        <option>Karni Mata Temple (Deshnok)</option>
+                                        <option>Rampuria Haveli</option>
+                                        <option>Bikaner Camel Festival</option>
+                                        <option>Gajner Palace</option>
+                                        <option>Shiv Bari Temple</option>
+                                        <option>National Research Centre on Camel</option>
+                                        <option>India’s First Camel Breeding Farm</option>
+                                        <option>Phool Mahal</option>
+                                        <option>Jain Temple Bikaner</option>
+                                    </select>`);
+                }else if (city === "bundi") {
+                    document.write(`<select>
+                                        <option>Bundi Fort</option>
+                                        <option>Taragarh Fort</option>
+                                        <option>Raniji Ki Baori</option>
+                                        <option>Jait Sagar Lake</option>
+                                        <option>Chhattar Mahal</option>
+                                        <option>Phool Sagar</option>
+                                        <option>Sukh Mahal</option>
+                                        <option>Nawal Sagar</option>
+                                        <option>Shiv Talai</option>
+                                        <option>Indragarh Fort</option>
+                                        <option>Chand Baori</option>
+                                    </select>`);
+                }else if (city === "chittorgarh") {
+                    document.write(`<select>
+                                        <option>Chittorgarh Fort</option>
+                                        <option>Vijay Stambh (Victory Tower)</option>
+                                        <option>Kirti Stambh</option>
+                                        <option>Rani Padmini's Palace</option>
+                                        <option>Sathish Pura Temple</option>
+                                        <option>Meera Temple</option>
+                                        <option>Kalika Mata Temple</option>
+                                        <option>Jain Temple</option>
+                                        <option>Gaumukh Reservoir</option>
+                                        <option>Fateh Prakash Palace</option>
+                                        <option>Rana Kumbha Palace</option>
+                                        <option>Chittorgarh Museum</option>
+                                    </select>`);
+                }else if (city === "churu") {
+                    document.write(`<select>
+                                        <option>Jungle Safari</option>
+                                        <option>Surajgarh Fort</option>
+                                        <option>Churu Fort</option>
+                                        <option>Fresco Havelis</option>
+                                        <option>Raghunath Temple</option>
+                                        <option>Hawa Mahal</option>
+                                        <option>Sri Bhavani Shankar Mandir</option>
+                                        <option>Khuri Sand Dunes</option>
+                                        <option>Rampuria Havelis</option>
+                                        <option>Shekhawati Havelis</option>
+                                    </select>`);
+                }else if (city === "dausa") {
+                    document.write(`<select>
+                                        <option>Amrakh Yogini Temple</option>
+                                        <option>Baijnath Temple</option>
+                                        <option>Harshat Mata Temple</option>
+                                        <option>Rani Sati Temple</option>
+                                        <option>Mehandipur Balaji Temple</option>
+                                        <option>Chand Baori</option>
+                                        <option>Chhath Baori</option>
+                                        <option>Sarkhej Roza</option>
+                                        <option>Ramgarh Vishdhari Sanctuary</option>
+                                        <option>Jal Mahal</option>
+                                    </select>`);
+                }else if (city === "dholpur") {
+                    document.write(`<select>
+                                        <option>Dholpur Palace</option>
+                                        <option>Ramsagar Sanctuary</option>
+                                        <option>Shergarh Fort</option>
+                                        <option>Machkund Temple</option>
+                                        <option>Rang Mahal</option>
+                                        <option>Charkhi Dadri</option>
+                                        <option>Bhanwar Mata Temple</option>
+                                        <option>Rudrayad Temple</option>
+                                        <option>Ban Sagar Dam</option>
+                                        <option>Phulbari Lake</option>
+                                    </select>`);
+                }else if (city === "dungarpur") {
+                    document.write(`<select>
+                                        <option>Badal Mahal</option>
+                                        <option>Juna Mahal</option>
+                                        <option>Shreenathji Temple</option>
+                                        <option>Gaib Sagar Lake</option>
+                                        <option>Sunset Point</option>
+                                        <option>Lake Palace</option>
+                                        <option>Raghunathji Temple</option>
+                                        <option>Rana Raj Singh Palace</option>
+                                        <option>Devi Temple</option>
+                                        <option>Achalgarh Fort</option>
+                                    </select>`);
+                }else if (city === "ganganagar" || city === "sri ganganagar") {
+                    document.write(`<select>
+                                        <option>Suratgarh Sanctuary</option>
+                                        <option>Ganganagar Fort</option>
+                                        <option>Ramsar</option>
+                                        <option>Shri Ganganagar Jain Temple</option>
+                                        <option>Baba Sohan Singh Ji Ki Dargah</option>
+                                        <option>Sadul Singh Museum</option>
+                                        <option>Rai Singh Fort</option>
+                                        <option>Guru Gobind Singh Park</option>
+                                        <option>Almora Lake</option>
+                                        <option>Fatehgarh Canal</option>
+                                    </select>`);
+                }else if (city === "hanumangarh") {
+                    document.write(`<select>
+                                        <option>Ganga Maharani Temple</option>
+                                        <option>Kurukshetra</option>
+                                        <option>Bhagat Singh Park</option>
+                                        <option>Suratgarh</option>
+                                        <option>Harigarh Fort</option>
+                                        <option>Rani Talab</option>
+                                        <option>Jagannath Temple</option>
+                                        <option>Mahavir Swami Temple</option>
+                                        <option>Gurudwara Shri Nanak Dev Ji</option>
+                                        <option>Ramsar Lake</option>
+                                    </select>`);
+                }else if (city === "jaipur") {
+                    document.write(`<select>
+                                        <option>Amber Fort</option>
+                                        <option>City Palace</option>
+                                        <option>Hawa Mahal</option>
+                                        <option>Jantar Mantar</option>
+                                        <option>Jaipur Fort (Nahargarh Fort)</option>
+                                        <option>Albert Hall Museum</option>
+                                        <option>Jaigarh Fort</option>
+                                        <option>Patrika Gate</option>
+                                        <option>Vidyadhar Garden</option>
+                                        <option>Nahargarh Fort</option>
+                                        <option>Chokhi Dhani</option>
+                                        <option>Jal Mahal (Water Palace)</option>
+                                        <option>Kanak Vrindavan Gardens</option>
+                                        <option>Birla Mandir (Laxmi Narayan Temple)</option>
+                                        <option>Govind Dev Ji Temple</option>
+                                        <option>Galtaji Temple (Monkey Temple)</option>
+                                        <option>Johari Bazaar</option>
+                                        <option>Bapu Bazaar</option>
+                                        <option>Tripolia Bazaar</option>
+                                        <option>Panna Meena Ka Kund</option>
+                                        <option>Raj Mandir Cinema</option>
+                                    </select>`);
+                }else if (city === "jaisalmer") {
+                    document.write(`<select>
+                                        <option>Jaisalmer Fort</option>
+                                        <option>Patwon Ki Haveli</option>
+                                        <option>Sam Sand Dunes</option>
+                                        <option>Gadisar Lake</option>
+                                        <option>Vyas Chhatri</option>
+                                        <option>Golden Fort</option>
+                                        <option>Desert National Park</option>
+                                        <option>Kuldhara Village</option>
+                                        <option>Bada Bagh</option>
+                                        <option>Jain Temples</option>
+                                    </select>`);
+                }else if (city === "jalore") {
+                    document.write(`<select>
+                                        <option>Jalore Fort</option>
+                                        <option>Vishnu Temple</option>
+                                        <option>Rani Ka Vav</option>
+                                        <option>Achal Fort</option>
+                                        <option>Ranakpur Jain Temple</option>
+                                        <option>Kumbhalgarh Fort</option>
+                                        <option>Shri Mahavir Jain Temple</option>
+                                        <option>Balaji Temple</option>
+                                        <option>Ajit Fort</option>
+                                        <option>Jain Temples</option>
+                                    </select>`);
+                }else if (city === "jhalawar") {
+                    document.write(`<select>
+                                        <option>Jhalawar Fort</option>
+                                        <option>Chougan Stadium</option>
+                                        <option>Bhavani Nataraj Temple</option>
+                                        <option>Surya Mandir</option>
+                                        <option>Shree Raghunathji Temple</option>
+                                        <option>Jain Temples</option>
+                                        <option>Ramsar Lake</option>
+                                        <option>Gagron Fort</option>
+                                        <option>Ganga Singh Museum</option>
+                                        <option>Kali Sindh River</option>
+                                    </select>`);
+                }else if (city === "jhunjhunu") {
+                    document.write(`<select>
+                                        <option>Shekhawati Havelis</option>
+                                        <option>Rani Sati Temple</option>
+                                        <option>Jai Singh Ki Kothi</option>
+                                        <option>Shri Jorbeer Ji Temple</option>
+                                        <option>Chandrayan Fort</option>
+                                        <option>Khetri Mahal</option>
+                                        <option>Mandawa Fort</option>
+                                        <option>Fatehpur</option>
+                                        <option>Shiv Sagar Lake</option>
+                                        <option>Raghunath Temple</option>
+                                    </select>`);
+                }else if (city === "jodhpur") {
+                    document.write(`<select>
+                                        <option>Mehrangarh Fort</option>
+                                        <option>Umaid Bhawan Palace</option>
+                                        <option>Jaswant Thada</option>
+                                        <option>Clock Tower</option>
+                                        <option>Sardar Market</option>
+                                        <option>Mandore Gardens</option>
+                                        <option>Umaid Garden</option>
+                                        <option>Kailana Lake</option>
+                                        <option>Clock Tower</option>
+                                        <option>Mandore Temples</option>
+                                    </select>`);
+                }else if (city === "karauli") {
+                    document.write(`<select>
+                                        <option>Karauli Fort</option>
+                                        <option>Madana Mohanji Temple</option>
+                                        <option>Bhuteshwar Temple</option>
+                                        <option>Timangarh Fort</option>
+                                        <option>City Palace</option>
+                                        <option>Shri Mahavir Ji Temple</option>
+                                        <option>Mehandipur Balaji Temple</option>
+                                        <option>Raghuveer Ji Temple</option>
+                                        <option>Ganga Maiya Temple</option>
+                                        <option>Chandreshwar Temple</option>
+                                    </select>`);
+                }else if (city === "kota") {
+                    document.write(`<select>
+                                        <option>Garadia Mahadev Temple</option>
+                                        <option>Kishore Sagar Lake</option>
+                                        <option>City Mall</option>
+                                        <option>Jagmandir Palace</option>
+                                        <option>Chambal Garden</option>
+                                        <option>Dr. Shyama Prasad Mukherjee Park</option>
+                                        <option>Seven Wonders Park</option>
+                                        <option>Rangbari Temple</option>
+                                        <option>Umaid Bhawan Palace</option>
+                                        <option> Chambal Garden</option>
+                                        <option>Seven Wonders Park</option>
+                                        <option>Kota Barrage</option>
+                                        <option>City Palace and Fort</option>
+                                        <option>Maharao Madho Singh Museum</option>
+                                        <option>Gaipernath Waterfall</option>
+                                        <option>Alnia Dam</option>
+                                        <option>Khade Ganesh Ji Temple</option>
+                                        <option>Godavari Dham Temple</option>
+                                        <option>Lucky Burj</option>
+                                        <option>Darrah Wildlife Sanctuary</option>
+                                        <option>Abheda Mahal and Zoo</option>
+                                    </select>`);
+                }else if (city === "nagaur") {
+                    document.write(`<select>
+                                        <option>Nagaur Fort</option>
+                                        <option>Jain Temples</option>
+                                        <option>Ramdeoji Temple</option>
+                                        <option>Amar Singh's Palace</option>
+                                        <option>Khimsar Fort</option>
+                                        <option>Rani Mahal</option>
+                                        <option>Gurudwara Guru Ka Bagh</option>
+                                        <option>Fateh Mahal</option>
+                                        <option>Surya Mandir</option>   
+                                        <option>Raghunath Temple</option>
+                                    </select>`);
+                }else if (city === "pali") {
+                    document.write(`<select>
+                                        <option>Ranakpur Jain Temple</option>
+                                        <option>Jawai Dam</option>
+                                        <option>Somnath Mandir</option>
+                                        <option>Gandhi Maidan</option>
+                                        <option>Virda Dham</option>
+                                        <option>Fort of Pali</option>
+                                        <option>Khungari Dham</option>
+                                        <option>Tejaji Temple</option>
+                                        <option>Sumeru Hill</option>
+                                        <option>Shri Parshuram Temple</option>
+                                    </select>`);
+                }else if (city === "pratapgarh") {
+                    document.write(`<select>
+                                        <option>Pratapgarh Fort</option>
+                                        <option>Rana Sanga's Palace</option>
+                                        <option>Chavand Fort</option>
+                                        <option>Shri Rajpurohit Dham</option>
+                                        <option>Bhainsrorgarh Fort</option>
+                                        <option>Rani Mahal</option>
+                                        <option>Suhela Lake</option>
+                                        <option>Kundalgarh Fort</option>
+                                        <option>Lord Shiva Temple</option>
+                                        <option>Jai Mandir</option>
+                                    </select>`);
+                }else if (city === "rajsamand") {
+                    document.write(`<select>
+                                        <option>Rajsamand Lake</option>
+                                        <option>Kumbhalgarh Fort</option>
+                                        <option>Haldighati</option>
+                                        <option>Ranakpur Jain Temple</option>
+                                        <option>Fatehsagar Lake</option>
+                                        <option>Shri Neminath Temple</option>
+                                        <option>Eklingji Temple</option>
+                                        <option>Parshuram Mahadev Temple</option>
+                                        <option>Charbhuja Temple</option>
+                                        <option>Rajiv Gandhi Park</option>
+                                    </select>`);
+                }else if (city === "sawai madhopur") {
+                    document.write(`<select>
+                                        <option>Ranthambore National Park</option>
+                                        <option>Ranthambore Fort</option>
+                                        <option>Trinetra Ganesh Temple</option>
+                                        <option>Surwal Lake</option>
+                                        <option>Jogi Mahal</option>
+                                        <option>Rajiv Gandhi Regional Museum of Natural History</option>
+                                        <option>Chamatkar Temple</option>
+                                        <option>Padam Talao</option>
+                                        <option>Wild Dragon Adventure Park</option>
+                                        <option>Kachida Valley</option>
+                                    </select>`);
+                }else if (city === "sikar") {
+                    document.write(`<select>
+                                        <option>Khatu Shyam Ji Temple</option>
+                                        <option>Rani Sati Temple</option>
+                                        <option>Harshnath Temple</option>
+                                        <option>Ganga Sagar Lake</option>
+                                        <option>Birbal Ka Chhatta</option>
+                                        <option>Shri Laxminarayan Temple</option>
+                                        <option>Dev Dham</option>
+                                        <option>Salasar Balaji Temple</option>
+                                        <option>Ajit Sagar Lake</option>
+                                        <option>Shri Baba Ramdev Temple</option>
+                                    </select>`);
+                }else if (city === "sirohi") {
+                    document.write(`<select>
+                                        <option>Mount Abu</option>
+                                        <option>Achalgarh Fort</option>
+                                        <option>Shri Arasuri Ambaji Mata Temple</option>
+                                        <option>Sirohi Fort</option>
+                                        <option>Vimala Temple</option>
+                                        <option>Ganesh Tekri</option>
+                                        <option>Kesar Singh Ji Temple</option>
+                                        <option>Baneshwar Temple</option>
+                                        <option>Jain Temples</option>
+                                        <option>Gurushikhar</option>
+                                    </select>`);
+                }else if (city === "tonk") {
+                    document.write(`<select>
+                                        <option>Tonk Fort</option>
+                                        <option>Jama Masjid</option>
+                                        <option>Sunehri Kothi</option>
+                                        <option>Shah Jahan's Mosque</option>
+                                        <option>Dev Narayan Temple</option>
+                                        <option>Rajasthan State Museum</option>
+                                        <option>Garh Palace</option>
+                                        <option>Shiv Mandir</option>
+                                        <option>Chandralok Garden</option>
+                                        <option>Biographical Museum</option>
+                                    </select>`);
+                }else if (city === "udaipur") {
+                    document.write(`<select>
+                                        <option>City Palace</option>
+                                        <option>Lake Pichola</option>
+                                        <option>Jag Mandir</option>
+                                        <option>Saheliyon Ki Bari</option>
+                                        <option>Fateh Sagar Lake</option>
+                                        <option>Jagdish Temple</option>
+                                        <option>Shilpgram</option>
+                                        <option>Sajjangarh Monsoon Palace</option>
+                                        <option>Udaipur Solar Observatory</option>
+                                        <option>Eklingji Temple</option>
+                                        <option>City Palace</option>
+                                        <option>Bagore Ki Haveli</option>
+                                        <option>Gulab Bagh and Zoo</option>
+                                        <option>Vintage Car Museum</option>
+                                        <option>Doodh Talai Musical Garden</option>
+                                        <option>Ahar Cenotaphs</option>
+                                        <option>Ambrai Ghat</option>
+                                    </select>`);
+                
+                }
+            }
+        }else if(country === "america"){
+
+        }else if(country === "uae"){
+
+        }else if(country === "australia"){
+
+        }else if(country === "russia"){
+
+        }else if(country === "africa"){
+
+        }else{
+            alert("Country is not in the above list");
+        }
+        </script>
+    </div>
+    <footer>
+        &copy; 2024 Explore World. All rights reserved. Visit our <a href="#">Help Center</a> for more info.
+    </footer>
+</body>
+</html>
