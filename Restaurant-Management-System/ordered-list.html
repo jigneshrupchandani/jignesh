@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Table Example</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    var count = parseInt(prompt("Enter count of the items for ordering: "));
+    var items = [];
+    var quantities = [];
+    var totalAmount = 0;
+    for (var i=0;i<count;i++) {
+        items.push(prompt("Enter your order: ").toLowerCase());
+        quantities.push(parseInt(prompt(`Enter the Quantity of ${items[i]}:`)));
+    }
+    for (var i=0;i<count;i++) {
+        var price = 0;
+        if (items[i] === "frankie" || items[i] === "samosa") {
+            price = 20;
+        } else if (items[i] === "pani puri" || items[i] === "bhel puri" || items[i] === "naan") {
+            price = 30;
+        } else if (items[i] === "lemonade" || items[i] === "orange juice" || items[i] === "garlic naan") {
+            price = 40;
+        } else if (items[i] === "aloo tikki" || items[i] === "momos" || items[i] === "chowmin" || items[i] === "bombay sandwich") {
+            price = 60;
+        } else if (items[i] === "apple fizz" || items[i] === "fruit beer" || items[i] === "burger" || items[i] === "red pasta" || items[i] === "jeera rice") {
+            price = 70;
+        } else if (items[i] === "pulao" || items[i] === "milk shake" || items[i] === "chocolate shake") {
+            price = 80;
+        } else if (items[i] === "fish amritsari" || items[i] === "fish tikka") {
+            price = 120;
+        } else if (items[i] === "pizza" || items[i] === "tandoori chicken") {
+            price = 150;
+        } else if (items[i] === "malai kofta" || items[i] === "chicken biryani") {
+            price = 180;
+        } else if (items[i] === "paneer masala") {
+            price = 200;
+        } else if (items[i] === "shahi paneer" || items[i] === "chole bhature" || items[i] === "fish curry" || items[i] === "chicken korma" || items[i] === "chicken shorma") {
+            price = 230;
+        } else if (items[i] === "seekh kababs" || items[i] === "chicken tikka" || items[i] === "mutton seekh kababs" || items[i] === "butter chicken") {
+            price = 380;
+        } else {
+            alert(`Sorry, ${items[i]} is not available on the menu.`);
+            continue;
+        }
+        totalAmount += price * quantities[i];
+    }
+    alert(`Your Total Amount is: ₹${totalAmount}`);
+</script>
+
+</body>
+</html>
