@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marksheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #marksheet {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid black;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #logo img {
+            width: 50px;
+            height: 50px;
+        }
+        #college {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        #uni {
+            margin: 10px 0;
+        }
+        #details, #marks {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+        #details th, #details td, #marks th, #marks td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .cgpa {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<script>
+    const College = prompt("Enter College Name:").toUpperCase();
+    let University = prompt("Enter University Name:").toUpperCase();
+    const Name = prompt("Enter Student Name:");
+    const Course = prompt("Enter Course Name:").toLocaleUpperCase();
+    const FName = prompt("Enter Student's Father Name:");
+    const Rollno = parseInt(prompt("Enter Roll number:"));
+    const year = parseInt(prompt("Enter year of Exam:"));
+    const Semester = parseInt(prompt("Enter your Semester:"));
+    let logo = "Logo";
+    const subject1 = prompt("Enter name of First Subject : ");
+    const internalMarks1 = parseInt(prompt(`Enter the Internal Marks of ${subject1} out of 30 : `));
+    const externalMarks1 = parseInt(prompt(`Enter tne External marks of ${subject1} out of 70 : `));
+    const sub1Total = (internalMarks1 + externalMarks1);
+    const subject2 = prompt("Enter name of Second Subject : ");
+    const internalMarks2 = parseInt(prompt(`Enter the Internal Marks of ${subject2} out of 30 : `));
+    const externalMarks2 = parseInt(prompt(`Enter tne External marks of ${subject2} out of 70 : `));
+    const sub2Total = (internalMarks2 + externalMarks2);
+    const subject3 = prompt("Enter name of third Subject : ");
+    const internalMarks3 = parseInt(prompt(`Enter the Internal Marks of ${subject3} out of 30 : `));
+    const externalMarks3 = parseInt(prompt(`Enter tne External marks of ${subject3} out of 70 : `));
+    const sub3Total = (internalMarks3 + externalMarks3);
+    const subject4 = prompt("Enter name of Fourth Subject : ");
+    const internalMarks4 = parseInt(prompt(`Enter the Internal Marks of ${subject4} out of 30 : `));
+    const externalMarks4 = parseInt(prompt(`Enter tne External marks of ${subject4} out of 70 : `));
+    const sub4Total = (internalMarks4 + externalMarks4);
+    const Total = (internalMarks1 + externalMarks1 + internalMarks2 + externalMarks2 + internalMarks3 + externalMarks3 + internalMarks4 + externalMarks4);
+    const Percentage = (Total / 4);
+    const CGPA = parseFloat(Percentage / 10);
+    if (University == "mdsu" || University == "maharshi dayand saraswati university" || University == "MDSU" || University == "Maharshi Dayand Saraswati University") {
+        logo = "mdsu.jpeg";
+        University = "Maharshi Dayanand Saraswati University";
+    } else if (University == "du" || University == "DU" || University == "delhi university"|| University == "Delhi University") {
+        logo = "du.png";
+        University = "Delhi University";
+    } else if (University == "bu" || University == "BU" || University == "bhagwant university" || University == "Bhagwant University") {
+        logo = "bu.jpeg";
+        University = "Bhagwant University";
+    } else {
+        alert("Logo for the entered university is not available.");
+    }
+    document.write(`<div id="marksheet">
+        <div id="logo"><img src="${logo}" alt="University Logo"></div>
+        <div id="college">${College}</div>
+        <div id="uni">${University}</div>
+        <div><h3>${Course} - Semester ${Semester} (${year})</h3></div>
+        <table id="details">
+            <tr><th>Name</th><td>${Name}</td></tr>
+            <tr><th>Father's Name</th><td>${FName}</td></tr>
+            <tr><th>Roll No</th><td>${Rollno}</td></tr>
+            <tr><th>Course</th><td>${Course}</td></tr>
+            <tr><th>Semester</th><td>${Semester}</td></tr>
+        </table>
+        <table id="marks">
+            <tr>
+                <th>Subject</th>
+                <th>Internal Marks (30)</th>
+                <th>External Marks (70)</th>
+                <th>Total (100)</th>
+            </tr>
+            <tr>
+                    <td>${subject1}</td>
+                    <td>${internalMarks1}</td>
+                    <td>${externalMarks1}</td>
+                    <td>${sub1Total}</td>
+            </tr>
+            <tr>
+                    <td>${subject2}</td>
+                    <td>${internalMarks2}</td>
+                    <td>${externalMarks2}</td>
+                    <td>${sub2Total}</td>
+            </tr>
+            <tr>
+                    <td>${subject3}</td>
+                    <td>${internalMarks3}</td>
+                    <td>${externalMarks3}</td>
+                    <td>${sub3Total}</td>
+            </tr>
+            <tr>
+                    <td>${subject4}</td>
+                    <td>${internalMarks4}</td>
+                    <td>${externalMarks4}</td>
+                    <td>${sub4Total}</td>
+            </tr>
+        </table>
+        <div class="cgpa">
+            <h4>Percentage: ${Percentage}%</h4>
+            <h4>CGPA: ${CGPA}</h4>
+        </div>
+        </div>`);
+</script>
+</body>
+</html>
