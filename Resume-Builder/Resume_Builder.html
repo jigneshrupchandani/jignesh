@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .resume {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .left-column, .right-column {
+      padding: 15px;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    .left-column {
+      width: 30%;
+      background-color: #f4f4f9;
+      border-right: 2px solid #ddd;
+    }
+    .right-column {
+      width: 70%;
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin: 0;
+      color: #333;
+    }
+    h2, h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+    .description {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin: 5px 0 15px 0;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section h3 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .duration {
+      float: right;
+      font-weight: bold;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="btn" onclick="buildResume()">Build Your Resume</button>
+    <div id="resume-container"></div>
+  </div>
+
+  <script>
+    function buildResume() {
+      const name = prompt("Enter your full name:");
+      const description = prompt("Enter a short description (e.g., Student, Web Developer):");
+      const summary = prompt("Write your Career Objective or Summary:");
+
+      const email = prompt("Enter your email:");
+      const phone = prompt("Enter your phone number:");
+
+      // Experience
+      const hasExperience = prompt("Do you have any work experience? (yes/no)").toLowerCase();
+      let experiences = [];
+      if (hasExperience === "yes") {
+        const numExperiences = parseInt(prompt("How many experiences do you have?"), 10);
+        for (let i = 0; i < numExperiences; i++) {
+          const jobTitle = prompt(`Enter job title for experience ${i + 1}:`);
+          const company = prompt(`Enter company name for experience ${i + 1}:`);
+          const years = parseInt(prompt(`Enter years worked at ${company}:`), 10);
+          experiences.push({ jobTitle, company, years });
+        }
+      }
+
+      // Technical Skills
+      const numTechSkills = parseInt(prompt("How many technical skills would you like to add?"), 10);
+      const techSkills = [];
+      for (let i = 0; i < numTechSkills; i++) {
+        techSkills.push(prompt(`Enter technical skill ${i + 1}:`));
+      }
+
+      // Soft Skills
+      const numSoftSkills = parseInt(prompt("How many soft skills would you like to add?"), 10);
+      const softSkills = [];
+      for (let i = 0; i < numSoftSkills; i++) {
+        softSkills.push(prompt(`Enter soft skill ${i + 1}:`));
+      }
+
+      // Projects
+      const numProjects = parseInt(prompt("How many projects would you like to list?"), 10);
+      const projects = [];
+      for (let i = 0; i < numProjects; i++) {
+        projects.push(prompt(`Enter project ${i + 1}:`));
+      }
+
+      // Certifications
+      const numCertifications = parseInt(prompt("How many certifications would you like to list?"), 10);
+      const certifications = [];
+      for (let i = 0; i < numCertifications; i++) {
+        const certName = prompt(`Enter certification ${i + 1}:`);
+        const organization = prompt(`Enter organization for ${certName}:`);
+        const duration = prompt(`Enter duration for ${certName} (e.g., 2020-2021):`);
+        certifications.push({ certName, organization, duration });
+      }
+
+      // Awards
+      const numAwards = parseInt(prompt("How many awards would you like to list?"), 10);
+      const awards = [];
+      for (let i = 0; i < numAwards; i++) {
+        awards.push(prompt(`Enter award ${i + 1}:`));
+      }
+
+      // Languages
+      const numLanguages = parseInt(prompt("How many languages do you know?"), 10);
+      const languages = [];
+      for (let i = 0; i < numLanguages; i++) {
+        languages.push(prompt(`Enter language ${i + 1}:`));
+      }
+
+      // Interests
+      const numInterests = parseInt(prompt("How many interests would you like to list?"), 10);
+      const interests = [];
+      for (let i = 0; i < numInterests; i++) {
+        interests.push(prompt(`Enter interest ${i + 1}:`));
+      }
+
+      // Display the resume
+      const resumeContainer = document.getElementById("resume-container");
+      resumeContainer.innerHTML = `
+        <div class="resume">
+          <div class="left-column">
+            <h2>${name}</h2>
+            <p class="description">${description}</p>
+            <p>${summary}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone}</p>
+            <h3>Technical Skills</h3>
+            <ul>${techSkills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+            <h3>Languages</h3>
+            <ul>${languages.map(language => `<li>${language}</li>`).join('')}</ul>
+          </div>
+          <div class="right-column">
+            ${hasExperience === "yes" ? `
+            <div class="section">
+              <h3>Work Experience</h3>
+              <ul>
+                ${experiences.map(exp => `<li><strong>${exp.jobTitle}</strong> at ${exp.company} (${exp.years} years)</li>`).join('')}
+              </ul>
+            </div>` : ""}
+            <div class="section">
+              <h3>Projects</h3>
+              <ul>${projects.map(project => `<li>${project}</li>`).join('')}</ul>
+            </div>
+            <div class="section">
+              <h3>Certifications</h3>
+              <ul>${certifications.map(cert => `<li>${cert.certName} (${cert.organization})<span class="duration">${cert.duration}</span></li>`).join('')}</ul>
+            </div>
+            <div class="section">
+              <h3>Awards</h3>
+              <ul>${awards.map(award => `<li>${award}</li>`).join('')}</ul>
+            </div>
+            <div class="section">
+              <h3>Soft Skills</h3>
+              <ul>${softSkills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+            </div>
+            <div class="section">
+              <h3>Interests</h3>
+              <ul>${interests.map(interest => `<li>${interest}</li>`).join('')}</ul>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html> 
