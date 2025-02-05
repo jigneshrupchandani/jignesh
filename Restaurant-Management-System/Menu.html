@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Menu</title>
+   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+        .menu{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+    .me1,.me2{
+      background-image: url(menu.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 125vh;
+      width: 50%;
+      padding-top: 300px;
+    }
+    .me1{
+      padding-left: 100px;
+    }
+    .me1 ul,.me2 ul{
+      color: white;
+      font-size: xx-large;
+    }
+    .me1 ul li ol,.me2 ul li ol{
+      color: white;
+      font-size: large;
+      padding:20px;
+    }
+    .me1 ul li ol li,.me2 ul li ol li{
+      margin: 10px;
+    }
+    .b{
+        margin: 0% 45%;
+    }
+    button{
+        border: none;
+        padding: 8px;
+        border-radius: 50px;
+        background-color: blue;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.write(`  <div class="menu">
+    <div class="me1"><div class="b"><a href="ordered-list.html"><button>Order Now</button></a></div>
+      <ul>
+        <li>Drinks
+          <ol>
+            <li>Lemonade      ......................  : 40</li>
+            <li>Apple Fizz      : 70</li>
+            <li>Fruit Beer      : 70</li>
+            <li>Chocolate Shake : 80</li>
+            <li>Milk Shake      : 80</li>
+            <li>Orange Juice    : 40</li>
+          </ol>
+        </li>
+        <li>Snacks & Street Food
+          <ol>
+            <li>Pani Puri       : 30</li>
+            <li>Bhel Puri       : 30</li>
+            <li>Aloo Tikki      : 60</li>
+            <li>Samosa          : 20</li>
+            <li>Pav Bhaji       : 60</li>
+            <li>Frankie         : 20</li>
+          </ol>
+        </li>
+      </ul>
+      <ul>
+        <li>Fast Food
+          <ol>
+            <li>Pizza           : 150</li>
+            <li>Burger          : 70</li>
+            <li>Momos           : 60</li>
+            <li>Chowmin         : 60</li>
+            <li>Red Sauce Pasta : 70</li>
+            <li>Bombay Sandwich : 60</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="me2"><div class="b"><a href="ordered-list.html"><button>Order Now</button></a></div>
+      <ul>
+        <li>Non-Veg
+          <ol>
+            <li>Fish Amritsari  : 120</li>
+            <li>Seekh Kababs    : 380</li>
+            <li>Chicken Tikka   : 380</li>
+            <li>Fish Tikka      : 120</li>
+            <li>Chicken Shorma  : 230</li>
+            <li>Mutton Seekh Kababs : 380</li>
+            <li>Butter Chicken  : 380</li>
+            <li>Chicken Korma   : 230</li>
+            <li>Mutton Curry    : 380</li>
+            <li>Fish Curry      : 230</li>
+            <li>Chicken Biryani : 180</li>
+            <li>Tandoori Chicken: 150</li>
+          </ol>
+        </li>
+        <li>Snacks & Street Food
+          <ol>
+            <li>Paneer Masala   : 200</li>
+            <li>Shahi Paneer    : 230</li>
+            <li>Chole Bhature   : 230</li>
+            <li>Malai Kofta     : 180</li>
+            <li>Jeera Rice      : 70</li>
+            <li>Pulao           : 80</li>
+            <li>Naan            : 30</li>
+            <li>Garlic Naan     : 40</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+  </div>`);
+    </script>
+    
+</body>
+</html>
