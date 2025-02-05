@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Management System</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-size: cover;
+            text-align: center;
+        }
+        header{
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #ffc107;
+            text-shadow: 2px 2px 5px black;
+        }
+        .container{
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+        h2{
+            font-size: 26px;
+            color: #ffcc00;
+            text-shadow: 1px 1px 3px black;
+        }
+        p{
+            font-size: 18px;
+            color: #dcdcdc;
+        }
+        footer{
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-shadow: 1px 1px 3px black;
+        }
+        footer a{
+            color: #ffc107;
+            text-decoration: none;
+        }
+        footer a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>Welcome to Car Showroom</header>
+    <div class="container">
+        <script>
+            var total = 0;
+            var brand = prompt("Enter the car brand (e.g., Maruti, Tesla, Tata):").toLowerCase();
+            if (brand === "maruti" || brand === "tesla" || brand === "tata") {
+                total += 500000;
+                var type = prompt("Enter the car type (electric, petrol, diesel, cng, hybrid):").toLowerCase();
+                if (type === "electric") {
+                    total += 200000;
+                } else if (type === "petrol") {
+                    total += 100000;
+                } else if (type === "diesel") {
+                    total += 150000;
+                } else if (type === "cng") {
+                    total += 120000;
+                } else if (type === "hybrid") {
+                    total += 250000;
+                } else {
+                    alert("Invalid car type entered.");
+                }
+                var modify = prompt("Do you want to modify your car? (yes/no):").toLowerCase();
+                if (modify === "yes") {
+                    var modification = prompt("Choose a modification option:\n1. Sunroof (+50,000)\n2. Alloy Wheels (+30,000)\n3. Leather Seats (+40,000)\n4. Music System (+20,000)").toLowerCase();
+                    if (modification === "1") {
+                        total += 50000;
+                    } else if (modification === "2") {
+                        total += 30000;
+                    } else if (modification === "3") {
+                        total += 40000;
+                    } else if (modification === "4") {
+                        total += 20000;
+                    } else {
+                        alert("Invalid modification choice.");
+                    }
+                }
+                document.write(`<h2>Car Purchase Summary</h2>
+                    <p><strong>Brand:</strong> ${brand.toUpperCase()}</p>
+                    <p><strong>Type:</strong> ${type.toUpperCase()}</p>
+                    <p><strong>Total Price:</strong> ₹${total}</p>`);
+            } else {
+                alert("Invalid brand entered. Please try again.");
+            }
+        </script>
+    </div>
+    <footer>
+        &copy; 2024 Car Showroom. All rights reserved. Visit our <a href="#">Help Center</a> for more info.
+    </footer>
+</body>
+</html>
